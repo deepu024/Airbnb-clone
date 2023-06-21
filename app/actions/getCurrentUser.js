@@ -12,7 +12,7 @@ export const getCurrentUser = async () => {
         const _id = JSON.parse(user.value)._id;
         const currentUser = await User.findById(_id);
         return JSON.parse(JSON.stringify(currentUser)); 
-    } catch (error) {
+    } catch (err) {
         throw new Error(err);
     }
 }
