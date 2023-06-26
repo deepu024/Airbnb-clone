@@ -14,6 +14,8 @@ export const metadata = {
   description: "Airbnb Clone",
 };
 
+export const dynamic = 'force-dynamic';
+
 export default async function RootLayout({ children }) {
   const currentUser = await getCurrentUser();
   return (
@@ -32,3 +34,4 @@ export default async function RootLayout({ children }) {
     </html>
   )
 }
+
